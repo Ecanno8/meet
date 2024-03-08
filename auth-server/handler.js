@@ -8,9 +8,6 @@ const redirect_uris = [
   "https://ecanno8.github.io/meet/"
 ];
 
-const AWS = require('aws-sdk');
-
-AWS.config.update({ debug: true });
 
 const oAuth2Client = new google.auth.OAuth2(
   CLIENT_ID,
