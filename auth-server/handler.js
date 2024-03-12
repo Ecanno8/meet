@@ -37,7 +37,7 @@ module.exports.getAccessToken = async (event) => {
   // Decode authorization code extracted from the URL query
 
   const code = decodeURIComponent(`${event.pathParameters.code}`);
-
+  console.log(code)
   return new Promise((resolve, reject) => {
     /**
      *  Exchange authorization code for access token with a “callback” after the exchange,
