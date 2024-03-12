@@ -77,7 +77,7 @@
         const getAccessToken = document.getElementById("getToken");
         const accessTokenElement = document.getElementById("accessToken");
         const getToken =
-            `https://surw3ekjt6.execute-api.us-west-1.amazonaws.com/dev/api/token/${code}`;
+            `https://surw3ekjt6.execute-api.us-west-1.amazonaws.com/dev/api/token/`;
 
         getAccessToken.onclick = function () {
             let code = codeValue.value;
@@ -86,7 +86,7 @@
             if (decodeURIComponent(code) === code) {
                 code = encodeURIComponent(codeValue.value);
             }
-            const getTokenRequest = getToken;
+            const getTokenRequest = getToken + code;
             fetch(getTokenRequest)
                 .then(function (response) {
                     return response.json();
@@ -101,11 +101,11 @@
         const getEvents = document.getElementById("getEvents");
         const events = document.getElementById("events");
         const getCalendarEvents =
-            `https://surw3ekjt6.execute-api.us-west-1.amazonaws.com/dev/api/get-events/${access_token}`;
+            `https://surw3ekjt6.execute-api.us-west-1.amazonaws.com/dev/api/get-events/`;
 
         getEvents.onclick = function () {
             const { access_token } = JSON.parse(accessTokenElement.innerText);
-            const eventRequest = getCalendarEvents;
+            const eventRequest = getCalendarEvents + access_token;
             fetch(eventRequest)
                 .then(function (response) {
                     return response.json();
