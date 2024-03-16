@@ -1,4 +1,6 @@
-import { useState } from "react";
+// src/components/CitySearch.js
+
+import { useState, useEffect } from "react";
 
 const CitySearch = ({ allLocations }) => {
     const [showSuggestions, setShowSuggestions] = useState(false);
@@ -18,6 +20,9 @@ const CitySearch = ({ allLocations }) => {
         setQuery(value);
         setShowSuggestions(false); // to hide the list
     };
+    useEffect(() => {
+        setSuggestions(allLocations);
+    }, [`${allLocations}`]);
     return (
         <div id="city-search">
             <input
