@@ -1,17 +1,16 @@
 {
   "files": {
-    "main.css": "/Ecanno8/meet/static/css/main.f855e6bc.css",
-    "main.js": "/Ecanno8/meet/static/js/main.84d96ac5.js",
-    "static/js/453.4a9980c6.chunk.js": "/Ecanno8/meet/static/js/453.4a9980c6.chunk.js",
-    "service-worker.js": "/Ecanno8/meet/service-worker.js",
-    "static/media/logo.svg": "/Ecanno8/meet/static/media/logo.103b5fa18196d5665a7e12318285c916.svg",
-    "index.html": "/Ecanno8/meet/index.html",
-    "main.f855e6bc.css.map": "/Ecanno8/meet/static/css/main.f855e6bc.css.map",
-    "main.84d96ac5.js.map": "/Ecanno8/meet/static/js/main.84d96ac5.js.map",
-    "453.4a9980c6.chunk.js.map": "/Ecanno8/meet/static/js/453.4a9980c6.chunk.js.map"
+    "main.css": "/meet/static/css/main.f855e6bc.css",
+    "main.js": "/meet/static/js/main.464e6837.js",
+    "static/js/453.4a9980c6.chunk.js": "/meet/static/js/453.4a9980c6.chunk.js",
+    "service-worker.js": "/meet/service-worker.js",
+    "index.html": "/meet/index.html",
+    "main.f855e6bc.css.map": "/meet/static/css/main.f855e6bc.css.map",
+    "main.464e6837.js.map": "/meet/static/js/main.464e6837.js.map",
+    "453.4a9980c6.chunk.js.map": "/meet/static/js/453.4a9980c6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f855e6bc.css",
-    "static/js/main.84d96ac5.js"
+    "static/js/main.464e6837.js"
   ]
 }
