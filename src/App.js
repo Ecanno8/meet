@@ -1,4 +1,3 @@
-// src/App.js
 import CitySearch from './components/CitySearch';
 import EventList from './components/EventList';
 import NumberOfEvents from './components/NumberOfEvents';
@@ -18,13 +17,17 @@ const App = () => {
   }, [currentCity, currentNOE]);
 
   const fetchData = async () => {
-    const allEvents = await getEvents();
-    const filteredEvents = currentCity === "See all cities" ?
-      allEvents :
-      allEvents.filter(event => event.location === currentCity)
-    setEvents(filteredEvents.slice(0, currentNOE));
-    setAllLocations(extractLocations(allEvents));
-  }
+    try {
+      const allEvents = await getEvents();
+      const filteredEvents = currentCity === 'See all cities'
+        ? allEvents
+        : allEvents.filter(event => event.location === currentCity);
+      setEvents(filteredEvents.slice(0, currentNOE));
+      setAllLocations(extractLocations(allEvents));
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+  };
 
   return (
     <div className="App">
@@ -33,6 +36,6 @@ const App = () => {
       <EventList events={events} />
     </div>
   );
-}
+};
 
 export default App;

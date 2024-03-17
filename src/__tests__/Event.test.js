@@ -16,6 +16,7 @@ describe('<Event /> component', () => {
 
     test('Event created time present', () => {
         expect(EventComponent.queryByText(event.created)).toBeInTheDocument();
+
     });
 
     test('Event location present', () => {
