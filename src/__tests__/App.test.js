@@ -34,8 +34,6 @@ describe('<App /> integration', () => {
         const EventListDOM = AppDOM.querySelector('#event-list');
         const allRenderedEventItems = within(EventListDOM).queryAllByRole('listitem');
 
-        console.log(allRenderedEventItems);
-
         const allEvents = await getEvents();
 
         const berlinEvents = allEvents.filter(
