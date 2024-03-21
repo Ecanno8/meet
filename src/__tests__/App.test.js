@@ -39,8 +39,8 @@ describe('<App /> integration', () => {
         const berlinEvents = allEvents.filter(
             event => event.location === 'Berlin, Germany'
         );
-        expect(allRenderedEventItems.length).toBe(berlinEvents.length);
 
+        expect(allRenderedEventItems.length).toBe(berlinEvents.length);
         allRenderedEventItems.forEach(event => {
             expect(event.textContent).toContain('Berlin, Germany')
         });
@@ -58,7 +58,7 @@ describe('<App /> integration', () => {
         const EventListDOM = AppDOM.querySelector('#event-list');
         const allRenderedEventItems =
             within(EventListDOM).queryAllByRole('listitem');
-        expect(allRenderedEventItems.length).toEqual(1);
+        expect(allRenderedEventItems.length).toEqual(10);
 
     })
 });

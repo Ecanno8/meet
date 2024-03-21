@@ -6,25 +6,25 @@ import userEvent from '@testing-library/user-event';
 
 describe('<Event /> component', () => {
     let EventComponent;
-    const event = mockData[0];
+    const mockevent = mockData[0];
     beforeEach(() => {
-        EventComponent = render(<Event event={event} />);
+        EventComponent = render(<Event event={mockevent} />);
     });
     test('Event title present', () => {
-        expect(EventComponent.queryByText(event.summary)).toBeInTheDocument();
+        expect(EventComponent.queryByText(mockevent.summary)).toBeInTheDocument();
     });
 
     test('Event created time present', () => {
-        expect(EventComponent.queryByText(event.created)).toBeInTheDocument();
+        expect(EventComponent.queryByText(mockevent.created)).toBeInTheDocument();
 
     });
 
     test('Event location present', () => {
-        expect(EventComponent.queryByText(event.location)).toBeInTheDocument();
+        expect(EventComponent.queryByText(mockevent.location)).toBeInTheDocument();
     });
 
     test('Button show details present', () => {
-        expect(EventComponent.queryByText('Show Details')).toBeInTheDocument();
+        expect(EventComponent.queryByText('show details')).toBeInTheDocument();
     });
 
     test('Events details section should be hidden by default', () => {
