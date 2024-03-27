@@ -13,6 +13,7 @@ const NumberOfEvents = ({ setCurrentNOE }) => {
                 placeholder="Enter a number"
                 value={query}
                 onChange={handleInputChanged}
+                data-testid="numberOfEventsInput"
             />
         </div>
     )
