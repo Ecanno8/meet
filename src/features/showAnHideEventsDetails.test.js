@@ -27,7 +27,7 @@ defineFeature(feature, (test) => {
             }
         );
 
-        then('all events will colapse by default', () => {
+        then('all events will collapse by default', () => {
             const EventDOM = AppComponent.container.firstChild;
             const details = EventDOM.querySelector('.details');
             expect(details).not.toBeInTheDocument();
@@ -52,11 +52,12 @@ defineFeature(feature, (test) => {
         });
 
         when("a user selects an event's details", async () => {
-            const button = await AppComponent.findByText(/(show|hide) details/i);
+            const button = AppComponent.queryAllByText('show details')[0];
+
             await userEvent.click(button);
         });
 
-        then('the details will show up for that chosen event', () => {
+        then('the details will show up for that choosen event', () => {
             const EventDOM = AppComponent.container.firstChild;
             const details = EventDOM.querySelector('.details');
             expect(details).toBeInTheDocument();
@@ -80,7 +81,7 @@ defineFeature(feature, (test) => {
                 expect(eventList[0]).toBeTruthy();
             });
 
-            button = await AppComponent.findByText(/(show|hide) details/i);
+            button = AppComponent.queryAllByText('Show Details')[0];
             await userEvent.click(button);
 
             const EventDOM = AppComponent.container.firstChild;
